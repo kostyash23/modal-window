@@ -1,0 +1,145 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.5s all;
+}
+
+.modal {
+  overflow: auto;
+  z-index: 30;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 475px;
+  height: 350px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__btn-close {
+  border: none;
+  margin-left: 20px;
+  background-image: url('./img/icon-popup-close.svg');
+  width: 24px;
+  background-color: #ffffff;
+  cursor: pointer;
+  height: 24px;
+}
+.modal__img {
+  display: block;
+  width: 125px;
+  margin: 0 auto;
+}
+.modal__text {
+  font-size: 24px;
+  color: #3d424d;
+  text-align: center;
+}
+.btn-coiteiner {
+  text-align: center;
+}
+.modal__btn-cancel {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #d7deea;
+  color: #8b93a3;
+  padding: 5px 70px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+.modal__bbtn-uninstall {
+  background-color: #ff3b30;
+  border-radius: 5px;
+  border: 1px solid #ff3b30;
+  color: #fff;
+  padding: 5px 70px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  border: 2px solid #a133b4;
+  font-size: 24px;
+  color: #a133b4;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(161, 51, 180, 0.5);
+  transition: 0.5s;
+  z-index: -1;
+}
+.btn span:nth-child(1) {
+  top: -100%;
+  left: -100%;
+}
+.btn:hover span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.btn span:nth-child(2) {
+  bottom: -100%;
+  left: -100%;
+}
+.btn:hover span:nth-child(2) {
+  bottom: 0;
+  left: 0;
+}
+.btn span:nth-child(3) {
+  top: -100%;
+  right: -100%;
+}
+.btn:hover span:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+.btn span:nth-child(4) {
+  bottom: -100%;
+  right: -100%;
+}
+.btn:hover span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button id="btn" class="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      open
+    </button>
+
+    <div class="modal" id="modal">
+      <button class="modal__btn-close" id="btn-close"></button>
+      <img
+        src="./img/icon-warning_notify-red.svg"
+        alt="warning"
+        class="modal__img"
+      />
+      <p class="modal__text">
+        Are you sure you want to uninstill the Shezam app
+      </p>
+      <div class="btn-coiteiner">
+        <button class="modal__btn-cancel" id="btn-cancel">Cancel</button>
+        <button class="modal__bbtn-uninstall" id="btn-uninstall">
+          Uninstall
+        </button>
+      </div>
+    </div>
+    <div class="overlay js-overlay-modal" id="overlay"></div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
